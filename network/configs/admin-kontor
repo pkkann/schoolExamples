@@ -1,0 +1,87 @@
+; J9019B (created by mbhNetwork on Mon, 14 Nov 2011 23:58:15 +0100)
+hostname "admin-kontor.switch.aub.dk"
+max-vlans 16
+time timezone 60
+time daylight-time-rule Western-Europe
+sntp server 10.2.0.254
+timesync sntp
+sntp unicast
+logging 10.2.0.254
+snmp-server community "public" Unrestricted
+snmp-server contact "help@aub.dk"
+snmp-server location "Administrationen-kontor"
+interface 1
+  name "PC: Reception"
+exit
+interface 2
+  name "PC: Vask/noegle"
+exit
+interface 3
+  name "Printer: Brother HL4570CDW"
+exit
+interface 13
+  name "PC: Vask"
+exit
+interface 15
+  name "PC: Noegle"
+exit
+interface 19
+  name "Kamera: Server"
+exit
+interface 20
+  name "Kamera: Receptionen"
+exit
+interface 26
+  name "admin-teknikrum"
+exit
+vlan 11
+  name "KKIK VPN"
+  tagged 1,26
+  untagged 23,24
+  no ip address
+  exit
+vlan 978
+  name "AUB"
+  untagged 1,2,3,4,5,6,7,8,9,10
+  tagged 26
+  no ip address
+  exit
+vlan 12
+  name "VoIP"
+  untagged 11,12
+  tagged 26
+  no ip address
+  exit
+vlan 3
+  name "vask"
+  untagged 13
+  tagged 26
+  no ip address
+  exit
+vlan 1
+  name "DEFAULT_VLAN"
+  untagged 14,16,17,18,21,22,25
+  no ip address
+  no untagged 1,2,3,4,5,6,7,8,9,10,11,12,13,15,19,20,23,24,26
+  exit
+vlan 4
+  name "noegle"
+  untagged 15
+  tagged 26
+  no ip address
+  exit
+vlan 9
+  name "video"
+  untagged 19,20
+  tagged 26
+  no ip address
+  exit
+vlan 2
+  name "management"
+  tagged 26
+  ip address 10.2.0.21 255.255.0.0
+  exit
+ip ssh
+ip ssh filetransfer
+management-vlan 2
+password manager

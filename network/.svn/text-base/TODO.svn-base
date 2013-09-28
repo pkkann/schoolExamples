@@ -1,0 +1,27 @@
+- Centralisér ikoner / placer dem på klasser (eller, endnu bedre, som CSS?)
+- Tilret link_to så der er bedre titel/alt text osv, og inkluderer "ikon"
+- Udtænk kobling mellem /index.php/entity-casing og klassenavn (specifikt sammensætte klassenavn som DeviceType eller VLAN)
+- Opret util-klasse der står for afvikling af eksterne scripts
+- Tilføj Copyright/licens
+
+'Live' opdatering af untaggede VLANs ved disable: Tjek at opdateringen lykkes.
+
+Neighbour-detection (erdos:lldp_test.php har proof of concept)
+
+Mulighed for at se VLAN-tildeling på disablede porte
+
+Validering af data:
+	1) Kontroller at alle naboer er deres nabos nabo
+	2) Detektering af mismatch mellem taggede vlans på nabo-porte
+	3) Detektering af "blinde" vlans (alle untaggede vlans skal kunne
+           "forlade" switchen via et tag, eller være untagged på flere porte)
+
+Globalt tjek af alle switch-configs
+
+Mulighed for tilføjelse af switche/porte
+
+Frontend til routes (routes som first class citizens?)
+
+Frontend til modules
+
+Opsplitning af "show" (put routes på separate views?)

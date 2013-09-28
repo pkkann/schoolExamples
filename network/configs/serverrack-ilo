@@ -1,0 +1,75 @@
+; J4900B (created by mbhNetwork on Thu, 17 May 2012 14:48:58 +0200)
+hostname "serverrack-ilo.switch.aub.dk"
+max-vlans 12
+time timezone 60
+time daylight-time-rule Western-Europe
+sntp server 10.2.0.254
+timesync sntp
+sntp unicast
+logging 10.2.0.254
+snmp-server community "public" Unrestricted
+snmp-server contact "help@aub.dk"
+snmp-server location "rackskab"
+interface 1
+  name "Pascal (lo100i)"
+exit
+interface 2
+  name "Fermat (lo100i)"
+exit
+interface 3
+  name "Jordan (lo100i)"
+exit
+interface 4
+  name "ESXi1"
+exit
+interface 5
+  name "ESXi2"
+exit
+interface 6
+  name "Asterix"
+exit
+interface 7
+  name "Obelix"
+exit
+interface 22
+  name "SAN Controller A"
+exit
+interface 23
+  name "SAN Controller B"
+exit
+interface 24
+  name "Cauchy (mgmt)"
+exit
+interface 25
+  name "Wireless Controller"
+exit
+interface 26
+  name "serverrack"
+exit
+vlan 5
+  name "servers"
+  untagged 1,2,3,4,5,6,7,8,9,10,22,23
+  tagged 26
+  no ip address
+  exit
+vlan 1
+  name "DEFAULT_VLAN"
+  untagged 11,12,13,14,15,16,17,18,19,20,21,26
+  no ip address
+  no untagged 1,2,3,4,5,6,7,8,9,10,22,23,24,25
+  exit
+vlan 2
+  name "management"
+  untagged 24,25
+  tagged 26
+  ip address 10.2.0.11 255.255.0.0
+  exit
+vlan 979
+  name "Wireless/ser"
+  tagged 26
+  no ip address
+  exit
+ip ssh
+ip ssh filetransfer
+management-vlan 2
+password manager

@@ -1,0 +1,108 @@
+; J4900B (created by mbhNetwork on Thu, 08 Dec 2011 14:58:57 +0100)
+hostname "admin-teknikrum.switch.aub.dk"
+max-vlans 17
+time timezone 60
+time daylight-time-rule Western-Europe
+sntp server 10.2.0.254
+timesync sntp
+sntp unicast
+logging 10.2.0.254
+snmp-server community "public" Unrestricted
+snmp-server contact "help@aub.dk"
+snmp-server location "Administrationen-teknikrum"
+interface 2
+  name "Inspektoer: VoIP"
+exit
+interface 4
+  name "Moedelokale: Ledig"
+exit
+interface 5
+  name "Moedelokale: Ledig"
+exit
+interface 6
+  name "Moedelokale: Ledig"
+exit
+interface 15
+  name "Inspektoer: PC"
+exit
+interface 16
+  name "Kontorassistent: Printer: HP Laserjet P4015TN"
+exit
+interface 17
+  name "Kopirum: Printer: Gestetner 4532"
+exit
+interface 18
+  name "Kontorassistent: PC"
+exit
+interface 19
+  name "Inspektoerassistent: PC"
+exit
+interface 20
+  name "Inspektoerassistent:Video kamera: Trendnet TV-IP410"
+exit
+interface 22
+  name "KKIK VPN LAN"
+exit
+interface 23
+  name "Cisco VPN Firewall"
+exit
+interface 25
+  name "admin-kontor"
+exit
+interface 26
+  name "core2"
+exit
+vlan 978
+  name "AUB"
+  untagged 1,3,4,5,6,7,8,9,10,13,14
+  tagged 25,26
+  no ip address
+  exit
+vlan 7
+  name "wan"
+  untagged 2,23
+  tagged 25,26
+  no ip address
+  exit
+vlan 12
+  name "VoIP"
+  untagged 11,12
+  tagged 25,26
+  no ip address
+  exit
+vlan 11
+  name "KKIK VPN"
+  untagged 15,16,17,18,19,20,21,22
+  tagged 25
+  no ip address
+  exit
+vlan 1
+  name "DEFAULT_VLAN"
+  untagged 24
+  no ip address
+  no untagged 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,25,26
+  exit
+vlan 2
+  name "management"
+  tagged 25,26
+  ip address 10.2.0.20 255.255.0.0
+  exit
+vlan 3
+  name "vask"
+  tagged 25,26
+  no ip address
+  exit
+vlan 4
+  name "noegle"
+  tagged 25,26
+  no ip address
+  exit
+vlan 9
+  name "video"
+  tagged 25,26
+  no ip address
+  exit
+ip ssh
+ip ssh filetransfer
+management-vlan 2
+password manager

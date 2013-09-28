@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/netgruppe/!svn/ver/529/www/monitor.aub.dk/network/bin
+END
+writeconf.pl
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/netgruppe/!svn/ver/368/www/monitor.aub.dk/network/bin/writeconf.pl
+END
+closed_list.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/netgruppe/!svn/ver/529/www/monitor.aub.dk/network/bin/closed_list.php
+END
+change_untagged_vlan.pl
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/netgruppe/!svn/ver/368/www/monitor.aub.dk/network/bin/change_untagged_vlan.pl
+END

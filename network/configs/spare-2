@@ -1,0 +1,33 @@
+; J4900B (created by mbhNetwork on Sat, 18 May 2013 16:04:58 +0200)
+hostname "spare-2.switch.aub.dk"
+max-vlans 11
+time timezone 60
+time daylight-time-rule Western-Europe
+sntp server 10.2.0.254
+timesync sntp
+sntp unicast
+logging 10.2.0.254
+snmp-server community "public" Unrestricted
+snmp-server contact "help@aub.dk"
+snmp-server location "Serverrummet"
+vlan 7
+  name "wan"
+  untagged 1,2,3,4,5,6,7,8,25
+  tagged 26
+  no ip address
+  exit
+vlan 1
+  name "DEFAULT_VLAN"
+  untagged 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
+  no ip address
+  no untagged 1,2,3,4,5,6,7,8,25,26
+  exit
+vlan 2
+  name "management"
+  tagged 26
+  ip address 10.2.0.31 255.255.0.0
+  exit
+ip ssh
+ip ssh filetransfer
+management-vlan 2
+password manager

@@ -1,0 +1,31 @@
+; J8697A (created by mbhNetwork on Sun, 05 Dec 2010 20:46:21 +0100)
+hostname "HP-5406zl-spare-1.switch.aub.dk"
+max-vlans 9
+time timezone 60
+time daylight-time-rule Western-Europe
+sntp server 10.2.0.254
+timesync sntp
+sntp unicast
+logging 10.2.0.254
+snmp-server community "public" Unrestricted
+snmp-server contact "help@aub.dk"
+snmp-server location "Serverrummet"
+module 1 type J8706A
+interface A1
+  name "spare1"
+exit
+interface A2
+  name "spare2"
+exit
+interface A24
+  name "core2"
+exit
+vlan 2
+  name "management"
+  tagged A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17,A18,A19,A20,A21,A22,A23,A24
+  ip address 10.2.0.33 255.255.0.0
+  exit
+ip ssh
+ip ssh filetransfer
+management-vlan 2
+password manager

@@ -1,0 +1,190 @@
+; J4900B (created by mbhNetwork on Fri, 20 Sep 2013 00:30:18 +0200)
+hostname "17-50.switch.aub.dk"
+max-vlans 31
+time timezone 60
+time daylight-time-rule Western-Europe
+sntp server 10.2.0.254
+timesync sntp
+sntp unicast
+logging 10.2.0.254
+snmp-server community "public" Unrestricted
+snmp-server contact "help@aub.dk"
+interface 1
+  name "17-72"
+exit
+interface 2
+  name "17-70"
+exit
+interface 3
+  name "17-68"
+exit
+interface 4
+  name "17-66"
+exit
+interface 5
+  name "17-64"
+exit
+interface 6
+  name "17-62"
+exit
+interface 7
+  name "17-60"
+exit
+interface 8
+  name "17-58"
+exit
+interface 9
+  name "17-56"
+exit
+interface 10
+  name "17-54"
+exit
+interface 11
+  name "17-52"
+exit
+interface 12
+  name "17-50"
+exit
+interface 25
+  name "core2"
+exit
+vlan 910
+  name "VLAN_910"
+  untagged 1
+  tagged 25
+  no ip address
+  exit
+vlan 911
+  name "VLAN_911"
+  untagged 2
+  tagged 25
+  no ip address
+  exit
+vlan 912
+  name "VLAN_912"
+  untagged 3
+  tagged 25
+  no ip address
+  exit
+vlan 913
+  name "VLAN_913"
+  untagged 4
+  tagged 25
+  no ip address
+  exit
+vlan 10
+  name "disabled"
+  untagged 5,6
+  tagged 25
+  no ip address
+  exit
+vlan 916
+  name "VLAN_916"
+  untagged 7
+  tagged 25
+  no ip address
+  exit
+vlan 917
+  name "VLAN_917"
+  untagged 8
+  tagged 25
+  no ip address
+  exit
+vlan 918
+  name "VLAN_918"
+  untagged 9
+  tagged 25
+  no ip address
+  exit
+vlan 919
+  name "VLAN_919"
+  untagged 10
+  tagged 25
+  no ip address
+  exit
+vlan 920
+  name "VLAN_920"
+  untagged 11
+  tagged 25
+  no ip address
+  exit
+vlan 921
+  name "VLAN_921"
+  untagged 12
+  tagged 25
+  no ip address
+  exit
+vlan 922
+  name "VLAN_922"
+  untagged 13
+  tagged 25
+  no ip address
+  exit
+vlan 923
+  name "VLAN_923"
+  untagged 14
+  tagged 25
+  no ip address
+  exit
+vlan 924
+  name "VLAN_924"
+  untagged 15
+  tagged 25
+  no ip address
+  exit
+vlan 925
+  name "VLAN_925"
+  untagged 16
+  tagged 25
+  no ip address
+  exit
+vlan 926
+  name "VLAN_926"
+  untagged 17
+  tagged 25
+  no ip address
+  exit
+vlan 927
+  name "VLAN_927"
+  untagged 18
+  tagged 25
+  no ip address
+  exit
+vlan 928
+  name "VLAN_928"
+  untagged 19
+  tagged 25
+  no ip address
+  exit
+vlan 929
+  name "VLAN_929"
+  untagged 20
+  tagged 25
+  no ip address
+  exit
+vlan 1
+  name "DEFAULT_VLAN"
+  untagged 21,22,23,26
+  no ip address
+  no untagged 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,24,25
+  exit
+vlan 2
+  name "management"
+  untagged 24
+  tagged 25
+  ip address 10.2.17.50 255.255.0.0
+  exit
+vlan 914
+  name "VLAN_914"
+  tagged 25
+  no ip address
+  exit
+vlan 915
+  name "VLAN_915"
+  tagged 25
+  no ip address
+  exit
+ip ssh
+ip ssh filetransfer
+management-vlan 2
+password manager

@@ -1,0 +1,108 @@
+; J9089A (created by mbhNetwork on Sun, 31 Jul 2011 02:12:45 +0200)
+hostname "center2.switch.aub.dk"
+max-vlans 11
+time timezone 60
+time daylight-time-rule Western-Europe
+sntp server 10.2.0.254
+timesync sntp
+sntp unicast
+logging 10.2.0.254
+snmp-server community "public" Unrestricted
+snmp-server contact "help@aub.dk"
+snmp-server location "center 2"
+interface 1
+  name "Audiocode 1"
+exit
+interface 2
+  name "Audiocode 2"
+exit
+interface 3
+  name "Audiocode 3"
+exit
+interface 4
+  name "Audiocode 4"
+exit
+interface 5
+  name "Audiocode 5"
+exit
+interface 6
+  name "Audiocode 6"
+exit
+interface 7
+  name "Audiocode 7"
+exit
+interface 8
+  name "Audiocode 8"
+exit
+interface 9
+  name "Audiocode 9"
+exit
+interface 10
+  name "Audiocode 10"
+exit
+interface 11
+  name "Audiocode 11"
+exit
+interface 12
+  name "Audiocode 12"
+exit
+interface 13
+  name "Audiocode 13"
+exit
+interface 14
+  name "Audiocode 14"
+exit
+interface 15
+  name "Audiocode 15"
+exit
+interface 16
+  name "Audiocode 16"
+exit
+interface 17
+  name "Audiocode 17"
+exit
+interface 18
+  name "Audiocode 18"
+exit
+interface 19
+  name "Audiocode 19"
+exit
+interface 20
+  name "Audiocode 20"
+exit
+interface 21
+  name "Audiocode 21"
+exit
+interface 22
+  name "Audiocode 22"
+exit
+interface 23
+  name "Audiocode 23"
+exit
+interface 24
+  name "Audiocode 24"
+exit
+interface 50
+  name "core2"
+exit
+vlan 7
+  name "wan"
+  untagged 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
+  tagged 50
+  no ip address
+  exit
+vlan 1
+  name "DEFAULT_VLAN"
+  untagged 25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49
+  no ip address
+  no untagged 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,50
+  exit
+vlan 2
+  name "management"
+  tagged 50
+  ip address 10.2.17.41 255.255.0.0
+  exit
+ip ssh
+ip ssh filetransfer
+management-vlan 2
+password manager

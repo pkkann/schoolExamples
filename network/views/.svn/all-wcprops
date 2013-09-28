@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/netgruppe/!svn/ver/531/www/monitor.aub.dk/network/views
+END
+DeviceView.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/netgruppe/!svn/ver/501/www/monitor.aub.dk/network/views/DeviceView.php
+END
+View.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/netgruppe/!svn/ver/430/www/monitor.aub.dk/network/views/View.php
+END
+EndpointView.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/netgruppe/!svn/ver/404/www/monitor.aub.dk/network/views/EndpointView.php
+END
+VlanView.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/netgruppe/!svn/ver/404/www/monitor.aub.dk/network/views/VlanView.php
+END
+DeviceTypeView.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/netgruppe/!svn/ver/404/www/monitor.aub.dk/network/views/DeviceTypeView.php
+END
+PortView.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/netgruppe/!svn/ver/531/www/monitor.aub.dk/network/views/PortView.php
+END

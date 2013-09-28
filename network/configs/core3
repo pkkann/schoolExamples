@@ -1,0 +1,3049 @@
+; J8697A (created by mbhNetwork on Thu, 19 Sep 2013 21:44:48 +0200)
+hostname "core3.switch.aub.dk"
+max-vlans 433
+time timezone 60
+time daylight-time-rule Western-Europe
+sntp server 10.2.0.254
+timesync sntp
+sntp unicast
+logging 10.2.0.254
+snmp-server community "public" Unrestricted
+snmp-server contact "help@aub.dk"
+snmp-server location "center 3"
+module 1 type J8706A
+interface A1
+  name "21-41"
+exit
+interface A2
+  name "21-62"
+exit
+interface A3
+  name "18-42"
+exit
+interface A4
+  name "21-21"
+exit
+interface A5
+  name "21-38"
+exit
+interface A6
+  name "21-2"
+exit
+interface A7
+  name "18-64"
+exit
+interface A8
+  name "18-54"
+exit
+interface A9
+  name "21-1"
+exit
+interface A10
+  name "21-14"
+exit
+interface A11
+  name "20-2"
+exit
+interface A12
+  name "18-1"
+exit
+interface A13
+  name "20-26"
+exit
+interface A14
+  name "18-23"
+exit
+interface A15
+  name "20-46"
+exit
+interface A16
+  name "18-95"
+exit
+interface A17
+  name "20-86"
+exit
+interface A18
+  name "18-71"
+exit
+interface A19
+  name "20-66"
+exit
+interface A20
+  name "18-47"
+exit
+interface A23
+  name "center3"
+exit
+interface A24
+  name "core2"
+exit
+vlan 2
+  name "management"
+  tagged A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17,A18,A19,A20,A21,A22,A23,A24
+  ip address 10.2.0.3 255.255.0.0
+  exit
+vlan 10
+  name "disabled"
+  tagged A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17,A18,A19,A20,A24
+  no ip address
+  exit
+vlan 1050
+  name "VLAN_1050"
+  tagged A1
+  ip address 10.97.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1051
+  name "VLAN_1051"
+  tagged A1
+  ip address 10.97.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1052
+  name "VLAN_1052"
+  tagged A1
+  ip address 10.97.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1053
+  name "VLAN_1053"
+  tagged A1
+  ip address 10.97.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1054
+  name "VLAN_1054"
+  tagged A1
+  ip address 10.97.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1055
+  name "VLAN_1055"
+  tagged A1
+  ip address 10.97.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1056
+  name "VLAN_1056"
+  tagged A1
+  ip address 10.97.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1057
+  name "VLAN_1057"
+  tagged A1
+  ip address 10.97.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1058
+  name "VLAN_1058"
+  tagged A1
+  ip address 10.97.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1059
+  name "VLAN_1059"
+  tagged A1
+  ip address 10.97.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1060
+  name "VLAN_1060"
+  tagged A1
+  ip address 10.97.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1061
+  name "VLAN_1061"
+  tagged A1
+  ip address 10.97.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1062
+  name "VLAN_1062"
+  tagged A1
+  ip address 10.97.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1063
+  name "VLAN_1063"
+  tagged A1
+  ip address 10.97.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1064
+  name "VLAN_1064"
+  tagged A1
+  ip address 10.97.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1065
+  name "VLAN_1065"
+  tagged A1
+  ip address 10.97.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1066
+  name "VLAN_1066"
+  tagged A1
+  ip address 10.97.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1067
+  name "VLAN_1067"
+  tagged A1
+  ip address 10.97.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1068
+  name "VLAN_1068"
+  tagged A1
+  ip address 10.97.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1069
+  name "VLAN_1069"
+  tagged A1
+  ip address 10.97.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1070
+  name "VLAN_1070"
+  tagged A2
+  ip address 10.98.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1071
+  name "VLAN_1071"
+  tagged A2
+  ip address 10.98.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1072
+  name "VLAN_1072"
+  tagged A2
+  ip address 10.98.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1073
+  name "VLAN_1073"
+  tagged A2
+  ip address 10.98.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1074
+  name "VLAN_1074"
+  tagged A2
+  ip address 10.98.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1075
+  name "VLAN_1075"
+  tagged A2
+  ip address 10.98.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1076
+  name "VLAN_1076"
+  tagged A2
+  ip address 10.98.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1077
+  name "VLAN_1077"
+  tagged A2
+  ip address 10.98.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1078
+  name "VLAN_1078"
+  tagged A2
+  ip address 10.98.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1079
+  name "VLAN_1079"
+  tagged A2
+  ip address 10.98.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1080
+  name "VLAN_1080"
+  tagged A2
+  ip address 10.98.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1081
+  name "VLAN_1081"
+  tagged A2
+  ip address 10.98.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1082
+  name "VLAN_1082"
+  tagged A2
+  ip address 10.98.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1083
+  name "VLAN_1083"
+  tagged A2
+  ip address 10.98.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1084
+  name "VLAN_1084"
+  tagged A2
+  ip address 10.98.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1085
+  name "VLAN_1085"
+  tagged A2
+  ip address 10.98.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1086
+  name "VLAN_1086"
+  tagged A2
+  ip address 10.98.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1087
+  name "VLAN_1087"
+  tagged A2
+  ip address 10.98.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1088
+  name "VLAN_1088"
+  tagged A2
+  ip address 10.98.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1089
+  name "VLAN_1089"
+  tagged A2
+  ip address 10.98.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1090
+  name "VLAN_1090"
+  tagged A3
+  ip address 10.99.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1091
+  name "VLAN_1091"
+  tagged A3
+  ip address 10.99.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1092
+  name "VLAN_1092"
+  tagged A3
+  ip address 10.99.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1093
+  name "VLAN_1093"
+  tagged A3
+  ip address 10.99.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1094
+  name "VLAN_1094"
+  tagged A3
+  ip address 10.99.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1095
+  name "VLAN_1095"
+  tagged A3
+  ip address 10.99.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1096
+  name "VLAN_1096"
+  tagged A3
+  ip address 10.99.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1097
+  name "VLAN_1097"
+  tagged A3
+  ip address 10.99.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1098
+  name "VLAN_1098"
+  tagged A3
+  ip address 10.99.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1099
+  name "VLAN_1099"
+  tagged A3
+  ip address 10.99.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1100
+  name "VLAN_1100"
+  tagged A3
+  ip address 10.99.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1101
+  name "VLAN_1101"
+  tagged A3
+  ip address 10.99.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1102
+  name "VLAN_1102"
+  tagged A3
+  ip address 10.99.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1103
+  name "VLAN_1103"
+  tagged A3
+  ip address 10.99.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1104
+  name "VLAN_1104"
+  tagged A3
+  ip address 10.99.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1105
+  name "VLAN_1105"
+  tagged A3
+  ip address 10.99.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1106
+  name "VLAN_1106"
+  tagged A3
+  ip address 10.99.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1107
+  name "VLAN_1107"
+  tagged A3
+  ip address 10.99.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1108
+  name "VLAN_1108"
+  tagged A3
+  ip address 10.99.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1109
+  name "VLAN_1109"
+  tagged A3
+  ip address 10.99.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1110
+  name "VLAN_1110"
+  tagged A4
+  ip address 10.100.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1111
+  name "VLAN_1111"
+  tagged A4
+  ip address 10.100.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1112
+  name "VLAN_1112"
+  tagged A4
+  ip address 10.100.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1113
+  name "VLAN_1113"
+  tagged A4
+  ip address 10.100.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1114
+  name "VLAN_1114"
+  tagged A4
+  ip address 10.100.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1115
+  name "VLAN_1115"
+  tagged A4
+  ip address 10.100.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1116
+  name "VLAN_1116"
+  tagged A4
+  ip address 10.100.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1117
+  name "VLAN_1117"
+  tagged A4
+  ip address 10.100.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1118
+  name "VLAN_1118"
+  tagged A4
+  ip address 10.100.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1119
+  name "VLAN_1119"
+  tagged A4
+  ip address 10.100.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1120
+  name "VLAN_1120"
+  tagged A4
+  ip address 10.100.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1121
+  name "VLAN_1121"
+  tagged A4
+  ip address 10.100.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1122
+  name "VLAN_1122"
+  tagged A4
+  ip address 10.100.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1123
+  name "VLAN_1123"
+  tagged A4
+  ip address 10.100.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1124
+  name "VLAN_1124"
+  tagged A4
+  ip address 10.100.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1125
+  name "VLAN_1125"
+  tagged A4
+  ip address 10.100.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1126
+  name "VLAN_1126"
+  tagged A4
+  ip address 10.100.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1127
+  name "VLAN_1127"
+  tagged A4
+  ip address 10.100.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1128
+  name "VLAN_1128"
+  tagged A4
+  ip address 10.100.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1129
+  name "VLAN_1129"
+  tagged A4
+  ip address 10.100.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1130
+  name "VLAN_1130"
+  tagged A5
+  ip address 10.101.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1131
+  name "VLAN_1131"
+  tagged A5
+  ip address 10.101.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1132
+  name "VLAN_1132"
+  tagged A5
+  ip address 10.101.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1133
+  name "VLAN_1133"
+  tagged A5
+  ip address 10.101.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1134
+  name "VLAN_1134"
+  tagged A5
+  ip address 10.101.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1135
+  name "VLAN_1135"
+  tagged A5
+  ip address 10.101.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1136
+  name "VLAN_1136"
+  tagged A5
+  ip address 10.101.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1137
+  name "VLAN_1137"
+  tagged A5
+  ip address 10.101.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1138
+  name "VLAN_1138"
+  tagged A5
+  ip address 10.101.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1139
+  name "VLAN_1139"
+  tagged A5
+  ip address 10.101.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1140
+  name "VLAN_1140"
+  tagged A5
+  ip address 10.101.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1141
+  name "VLAN_1141"
+  tagged A5
+  ip address 10.101.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1142
+  name "VLAN_1142"
+  tagged A5
+  ip address 10.101.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1143
+  name "VLAN_1143"
+  tagged A5
+  ip address 10.101.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1144
+  name "VLAN_1144"
+  tagged A5
+  ip address 10.101.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1145
+  name "VLAN_1145"
+  tagged A5
+  ip address 10.101.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1146
+  name "VLAN_1146"
+  tagged A5
+  ip address 10.101.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1147
+  name "VLAN_1147"
+  tagged A5
+  ip address 10.101.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1148
+  name "VLAN_1148"
+  tagged A5
+  ip address 10.101.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1149
+  name "VLAN_1149"
+  tagged A5
+  ip address 10.101.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1150
+  name "VLAN_1150"
+  tagged A6
+  ip address 10.102.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1151
+  name "VLAN_1151"
+  tagged A6
+  ip address 10.102.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1152
+  name "VLAN_1152"
+  tagged A6
+  ip address 10.102.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1153
+  name "VLAN_1153"
+  tagged A6
+  ip address 10.102.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1154
+  name "VLAN_1154"
+  tagged A6
+  ip address 10.102.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1155
+  name "VLAN_1155"
+  tagged A6
+  ip address 10.102.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1156
+  name "VLAN_1156"
+  tagged A6
+  ip address 10.102.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1157
+  name "VLAN_1157"
+  tagged A6
+  ip address 10.102.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1158
+  name "VLAN_1158"
+  tagged A6
+  ip address 10.102.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1159
+  name "VLAN_1159"
+  tagged A6
+  ip address 10.102.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1160
+  name "VLAN_1160"
+  tagged A6
+  ip address 10.102.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1161
+  name "VLAN_1161"
+  tagged A6
+  ip address 10.102.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1162
+  name "VLAN_1162"
+  tagged A6
+  ip address 10.102.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1163
+  name "VLAN_1163"
+  tagged A6
+  ip address 10.102.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1164
+  name "VLAN_1164"
+  tagged A6
+  ip address 10.102.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1165
+  name "VLAN_1165"
+  tagged A6
+  ip address 10.102.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1166
+  name "VLAN_1166"
+  tagged A6
+  ip address 10.102.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1167
+  name "VLAN_1167"
+  tagged A6
+  ip address 10.102.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1168
+  name "VLAN_1168"
+  tagged A6
+  ip address 10.102.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1169
+  name "VLAN_1169"
+  tagged A6
+  ip address 10.102.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1170
+  name "VLAN_1170"
+  tagged A7
+  ip address 10.103.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1171
+  name "VLAN_1171"
+  tagged A7
+  ip address 10.103.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1172
+  name "VLAN_1172"
+  tagged A7
+  ip address 10.103.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1173
+  name "VLAN_1173"
+  tagged A7
+  ip address 10.103.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1174
+  name "VLAN_1174"
+  tagged A7
+  ip address 10.103.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1175
+  name "VLAN_1175"
+  tagged A7
+  ip address 10.103.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1176
+  name "VLAN_1176"
+  tagged A7
+  ip address 10.103.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1177
+  name "VLAN_1177"
+  tagged A7
+  ip address 10.103.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1178
+  name "VLAN_1178"
+  tagged A7
+  ip address 10.103.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1179
+  name "VLAN_1179"
+  tagged A7
+  ip address 10.103.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1180
+  name "VLAN_1180"
+  tagged A7
+  ip address 10.103.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1181
+  name "VLAN_1181"
+  tagged A7
+  ip address 10.103.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1182
+  name "VLAN_1182"
+  tagged A7
+  ip address 10.103.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1183
+  name "VLAN_1183"
+  tagged A7
+  ip address 10.103.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1184
+  name "VLAN_1184"
+  tagged A7
+  ip address 10.103.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1185
+  name "VLAN_1185"
+  tagged A7
+  ip address 10.103.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1186
+  name "VLAN_1186"
+  tagged A7
+  ip address 10.103.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1187
+  name "VLAN_1187"
+  tagged A7
+  ip address 10.103.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1188
+  name "VLAN_1188"
+  tagged A7
+  ip address 10.103.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1189
+  name "VLAN_1189"
+  tagged A7
+  ip address 10.103.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1190
+  name "VLAN_1190"
+  tagged A8
+  ip address 10.104.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1191
+  name "VLAN_1191"
+  tagged A8
+  ip address 10.104.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1192
+  name "VLAN_1192"
+  tagged A8
+  ip address 10.104.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1193
+  name "VLAN_1193"
+  tagged A8
+  ip address 10.104.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1194
+  name "VLAN_1194"
+  tagged A8
+  ip address 10.104.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1195
+  name "VLAN_1195"
+  tagged A8
+  ip address 10.104.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1196
+  name "VLAN_1196"
+  tagged A8
+  ip address 10.104.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1197
+  name "VLAN_1197"
+  tagged A8
+  ip address 10.104.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1198
+  name "VLAN_1198"
+  tagged A8
+  ip address 10.104.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1199
+  name "VLAN_1199"
+  tagged A8
+  ip address 10.104.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1200
+  name "VLAN_1200"
+  tagged A8
+  ip address 10.104.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1201
+  name "VLAN_1201"
+  tagged A8
+  ip address 10.104.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1202
+  name "VLAN_1202"
+  tagged A8
+  ip address 10.104.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1203
+  name "VLAN_1203"
+  tagged A8
+  ip address 10.104.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1204
+  name "VLAN_1204"
+  tagged A8
+  ip address 10.104.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1205
+  name "VLAN_1205"
+  tagged A8
+  ip address 10.104.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1206
+  name "VLAN_1206"
+  tagged A8
+  ip address 10.104.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1207
+  name "VLAN_1207"
+  tagged A8
+  ip address 10.104.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1208
+  name "VLAN_1208"
+  tagged A8
+  ip address 10.104.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1209
+  name "VLAN_1209"
+  tagged A8
+  ip address 10.104.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1210
+  name "VLAN_1210"
+  tagged A9
+  ip address 10.105.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1211
+  name "VLAN_1211"
+  tagged A9
+  ip address 10.105.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1212
+  name "VLAN_1212"
+  tagged A9
+  ip address 10.105.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1213
+  name "VLAN_1213"
+  tagged A9
+  ip address 10.105.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1214
+  name "VLAN_1214"
+  tagged A9
+  ip address 10.105.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1215
+  name "VLAN_1215"
+  tagged A9
+  ip address 10.105.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1216
+  name "VLAN_1216"
+  tagged A9
+  ip address 10.105.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1217
+  name "VLAN_1217"
+  tagged A9
+  ip address 10.105.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1218
+  name "VLAN_1218"
+  tagged A9
+  ip address 10.105.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1219
+  name "VLAN_1219"
+  tagged A9
+  ip address 10.105.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1220
+  name "VLAN_1220"
+  tagged A9
+  ip address 10.105.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1221
+  name "VLAN_1221"
+  tagged A9
+  ip address 10.105.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1222
+  name "VLAN_1222"
+  tagged A9
+  ip address 10.105.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1223
+  name "VLAN_1223"
+  tagged A9
+  ip address 10.105.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1224
+  name "VLAN_1224"
+  tagged A9
+  ip address 10.105.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1225
+  name "VLAN_1225"
+  tagged A9
+  ip address 10.105.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1226
+  name "VLAN_1226"
+  tagged A9
+  ip address 10.105.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1227
+  name "VLAN_1227"
+  tagged A9
+  ip address 10.105.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1228
+  name "VLAN_1228"
+  tagged A9
+  ip address 10.105.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1229
+  name "VLAN_1229"
+  tagged A9
+  ip address 10.105.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1230
+  name "VLAN_1230"
+  tagged A10
+  ip address 10.106.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1231
+  name "VLAN_1231"
+  tagged A10
+  ip address 10.106.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1232
+  name "VLAN_1232"
+  tagged A10
+  ip address 10.106.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1233
+  name "VLAN_1233"
+  tagged A10
+  ip address 10.106.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1234
+  name "VLAN_1234"
+  tagged A10
+  ip address 10.106.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1235
+  name "VLAN_1235"
+  tagged A10
+  ip address 10.106.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1236
+  name "VLAN_1236"
+  tagged A10
+  ip address 10.106.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1237
+  name "VLAN_1237"
+  tagged A10
+  ip address 10.106.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1238
+  name "VLAN_1238"
+  tagged A10
+  ip address 10.106.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1239
+  name "VLAN_1239"
+  tagged A10
+  ip address 10.106.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1240
+  name "VLAN_1240"
+  tagged A10
+  ip address 10.106.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1241
+  name "VLAN_1241"
+  tagged A10
+  ip address 10.106.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1242
+  name "VLAN_1242"
+  tagged A10
+  ip address 10.106.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1243
+  name "VLAN_1243"
+  tagged A10
+  ip address 10.106.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1244
+  name "VLAN_1244"
+  tagged A10
+  ip address 10.106.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1245
+  name "VLAN_1245"
+  tagged A10
+  ip address 10.106.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1246
+  name "VLAN_1246"
+  tagged A10
+  ip address 10.106.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1247
+  name "VLAN_1247"
+  tagged A10
+  ip address 10.106.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1248
+  name "VLAN_1248"
+  tagged A10
+  ip address 10.106.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1249
+  name "VLAN_1249"
+  tagged A10
+  ip address 10.106.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1250
+  name "VLAN_1250"
+  tagged A11
+  ip address 10.107.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1251
+  name "VLAN_1251"
+  tagged A11
+  ip address 10.107.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1252
+  name "VLAN_1252"
+  tagged A11
+  ip address 10.107.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1253
+  name "VLAN_1253"
+  tagged A11
+  ip address 10.107.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1254
+  name "VLAN_1254"
+  tagged A11
+  ip address 10.107.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1255
+  name "VLAN_1255"
+  tagged A11
+  ip address 10.107.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1256
+  name "VLAN_1256"
+  tagged A11
+  ip address 10.107.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1257
+  name "VLAN_1257"
+  tagged A11
+  ip address 10.107.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1258
+  name "VLAN_1258"
+  tagged A11
+  ip address 10.107.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1259
+  name "VLAN_1259"
+  tagged A11
+  ip address 10.107.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1260
+  name "VLAN_1260"
+  tagged A11
+  ip address 10.107.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1261
+  name "VLAN_1261"
+  tagged A11
+  ip address 10.107.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1262
+  name "VLAN_1262"
+  tagged A11
+  ip address 10.107.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1263
+  name "VLAN_1263"
+  tagged A11
+  ip address 10.107.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1264
+  name "VLAN_1264"
+  tagged A11
+  ip address 10.107.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1265
+  name "VLAN_1265"
+  tagged A11
+  ip address 10.107.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1266
+  name "VLAN_1266"
+  tagged A11
+  ip address 10.107.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1267
+  name "VLAN_1267"
+  tagged A11
+  ip address 10.107.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1268
+  name "VLAN_1268"
+  tagged A11
+  ip address 10.107.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1269
+  name "VLAN_1269"
+  tagged A11
+  ip address 10.107.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1270
+  name "VLAN_1270"
+  tagged A12
+  ip address 10.108.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1271
+  name "VLAN_1271"
+  tagged A12
+  ip address 10.108.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1272
+  name "VLAN_1272"
+  tagged A12
+  ip address 10.108.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1273
+  name "VLAN_1273"
+  tagged A12
+  ip address 10.108.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1274
+  name "VLAN_1274"
+  tagged A12
+  ip address 10.108.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1275
+  name "VLAN_1275"
+  tagged A12
+  ip address 10.108.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1276
+  name "VLAN_1276"
+  tagged A12
+  ip address 10.108.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1277
+  name "VLAN_1277"
+  tagged A12
+  ip address 10.108.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1278
+  name "VLAN_1278"
+  tagged A12
+  ip address 10.108.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1279
+  name "VLAN_1279"
+  tagged A12
+  ip address 10.108.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1280
+  name "VLAN_1280"
+  tagged A12
+  ip address 10.108.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1281
+  name "VLAN_1281"
+  tagged A12
+  ip address 10.108.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1282
+  name "VLAN_1282"
+  tagged A12
+  ip address 10.108.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1283
+  name "VLAN_1283"
+  tagged A12
+  ip address 10.108.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1284
+  name "VLAN_1284"
+  tagged A12
+  ip address 10.108.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1285
+  name "VLAN_1285"
+  tagged A12
+  ip address 10.108.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1286
+  name "VLAN_1286"
+  tagged A12
+  ip address 10.108.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1287
+  name "VLAN_1287"
+  tagged A12
+  ip address 10.108.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1288
+  name "VLAN_1288"
+  tagged A12
+  ip address 10.108.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1289
+  name "VLAN_1289"
+  tagged A12
+  ip address 10.108.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1290
+  name "VLAN_1290"
+  tagged A13
+  ip address 10.109.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1291
+  name "VLAN_1291"
+  tagged A13
+  ip address 10.109.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1292
+  name "VLAN_1292"
+  tagged A13
+  ip address 10.109.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1293
+  name "VLAN_1293"
+  tagged A13
+  ip address 10.109.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1294
+  name "VLAN_1294"
+  tagged A13
+  ip address 10.109.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1295
+  name "VLAN_1295"
+  tagged A13
+  ip address 10.109.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1296
+  name "VLAN_1296"
+  tagged A13
+  ip address 10.109.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1297
+  name "VLAN_1297"
+  tagged A13
+  ip address 10.109.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1298
+  name "VLAN_1298"
+  tagged A13
+  ip address 10.109.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1299
+  name "VLAN_1299"
+  tagged A13
+  ip address 10.109.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1300
+  name "VLAN_1300"
+  tagged A13
+  ip address 10.109.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1301
+  name "VLAN_1301"
+  tagged A13
+  ip address 10.109.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1302
+  name "VLAN_1302"
+  tagged A13
+  ip address 10.109.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1303
+  name "VLAN_1303"
+  tagged A13
+  ip address 10.109.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1304
+  name "VLAN_1304"
+  tagged A13
+  ip address 10.109.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1305
+  name "VLAN_1305"
+  tagged A13
+  ip address 10.109.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1306
+  name "VLAN_1306"
+  tagged A13
+  ip address 10.109.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1307
+  name "VLAN_1307"
+  tagged A13
+  ip address 10.109.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1308
+  name "VLAN_1308"
+  tagged A13
+  ip address 10.109.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1309
+  name "VLAN_1309"
+  tagged A13
+  ip address 10.109.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1310
+  name "VLAN_1310"
+  tagged A14
+  ip address 10.110.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1311
+  name "VLAN_1311"
+  tagged A14
+  ip address 10.110.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1312
+  name "VLAN_1312"
+  tagged A14
+  ip address 10.110.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1313
+  name "VLAN_1313"
+  tagged A14
+  ip address 10.110.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1314
+  name "VLAN_1314"
+  tagged A14
+  ip address 10.110.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1315
+  name "VLAN_1315"
+  tagged A14
+  ip address 10.110.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1316
+  name "VLAN_1316"
+  tagged A14
+  ip address 10.110.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1317
+  name "VLAN_1317"
+  tagged A14
+  ip address 10.110.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1318
+  name "VLAN_1318"
+  tagged A14
+  ip address 10.110.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1319
+  name "VLAN_1319"
+  tagged A14
+  ip address 10.110.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1320
+  name "VLAN_1320"
+  tagged A14
+  ip address 10.110.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1321
+  name "VLAN_1321"
+  tagged A14
+  ip address 10.110.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1322
+  name "VLAN_1322"
+  tagged A14
+  ip address 10.110.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1323
+  name "VLAN_1323"
+  tagged A14
+  ip address 10.110.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1324
+  name "VLAN_1324"
+  tagged A14
+  ip address 10.110.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1325
+  name "VLAN_1325"
+  tagged A14
+  ip address 10.110.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1326
+  name "VLAN_1326"
+  tagged A14
+  ip address 10.110.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1327
+  name "VLAN_1327"
+  tagged A14
+  ip address 10.110.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1328
+  name "VLAN_1328"
+  tagged A14
+  ip address 10.110.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1329
+  name "VLAN_1329"
+  tagged A14
+  ip address 10.110.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1330
+  name "VLAN_1330"
+  tagged A15
+  ip address 10.111.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1331
+  name "VLAN_1331"
+  tagged A15
+  ip address 10.111.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1332
+  name "VLAN_1332"
+  tagged A15
+  ip address 10.111.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1333
+  name "VLAN_1333"
+  tagged A15
+  ip address 10.111.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1334
+  name "VLAN_1334"
+  tagged A15
+  ip address 10.111.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1335
+  name "VLAN_1335"
+  tagged A15
+  ip address 10.111.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1336
+  name "VLAN_1336"
+  tagged A15
+  ip address 10.111.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1337
+  name "VLAN_1337"
+  tagged A15
+  ip address 10.111.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1338
+  name "VLAN_1338"
+  tagged A15
+  ip address 10.111.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1339
+  name "VLAN_1339"
+  tagged A15
+  ip address 10.111.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1340
+  name "VLAN_1340"
+  tagged A15
+  ip address 10.111.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1341
+  name "VLAN_1341"
+  tagged A15
+  ip address 10.111.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1342
+  name "VLAN_1342"
+  tagged A15
+  ip address 10.111.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1343
+  name "VLAN_1343"
+  tagged A15
+  ip address 10.111.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1344
+  name "VLAN_1344"
+  tagged A15
+  ip address 10.111.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1345
+  name "VLAN_1345"
+  tagged A15
+  ip address 10.111.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1346
+  name "VLAN_1346"
+  tagged A15
+  ip address 10.111.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1347
+  name "VLAN_1347"
+  tagged A15
+  ip address 10.111.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1348
+  name "VLAN_1348"
+  tagged A15
+  ip address 10.111.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1349
+  name "VLAN_1349"
+  tagged A15
+  ip address 10.111.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1350
+  name "VLAN_1350"
+  tagged A16
+  ip address 10.112.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1351
+  name "VLAN_1351"
+  tagged A16
+  ip address 10.112.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1352
+  name "VLAN_1352"
+  tagged A16
+  ip address 10.112.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1353
+  name "VLAN_1353"
+  tagged A16
+  ip address 10.112.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1354
+  name "VLAN_1354"
+  tagged A16
+  ip address 10.112.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1355
+  name "VLAN_1355"
+  tagged A16
+  ip address 10.112.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1356
+  name "VLAN_1356"
+  tagged A16
+  ip address 10.112.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1357
+  name "VLAN_1357"
+  tagged A16
+  ip address 10.112.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1358
+  name "VLAN_1358"
+  tagged A16
+  ip address 10.112.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1359
+  name "VLAN_1359"
+  tagged A16
+  ip address 10.112.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1360
+  name "VLAN_1360"
+  tagged A16
+  ip address 10.112.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1361
+  name "VLAN_1361"
+  tagged A16
+  ip address 10.112.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1362
+  name "VLAN_1362"
+  tagged A16
+  ip address 10.112.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1363
+  name "VLAN_1363"
+  tagged A16
+  ip address 10.112.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1364
+  name "VLAN_1364"
+  tagged A16
+  ip address 10.112.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1365
+  name "VLAN_1365"
+  tagged A16
+  ip address 10.112.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1366
+  name "VLAN_1366"
+  tagged A16
+  ip address 10.112.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1367
+  name "VLAN_1367"
+  tagged A16
+  ip address 10.112.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1368
+  name "VLAN_1368"
+  tagged A16
+  ip address 10.112.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1369
+  name "VLAN_1369"
+  tagged A16
+  ip address 10.112.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1370
+  name "VLAN_1370"
+  tagged A17
+  ip address 10.113.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1371
+  name "VLAN_1371"
+  tagged A17
+  ip address 10.113.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1372
+  name "VLAN_1372"
+  tagged A17
+  ip address 10.113.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1373
+  name "VLAN_1373"
+  tagged A17
+  ip address 10.113.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1374
+  name "VLAN_1374"
+  tagged A17
+  ip address 10.113.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1375
+  name "VLAN_1375"
+  tagged A17
+  ip address 10.113.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1376
+  name "VLAN_1376"
+  tagged A17
+  ip address 10.113.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1377
+  name "VLAN_1377"
+  tagged A17
+  ip address 10.113.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1378
+  name "VLAN_1378"
+  tagged A17
+  ip address 10.113.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1379
+  name "VLAN_1379"
+  tagged A17
+  ip address 10.113.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1380
+  name "VLAN_1380"
+  tagged A17
+  ip address 10.113.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1381
+  name "VLAN_1381"
+  tagged A17
+  ip address 10.113.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1382
+  name "VLAN_1382"
+  tagged A17
+  ip address 10.113.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1383
+  name "VLAN_1383"
+  tagged A17
+  ip address 10.113.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1384
+  name "VLAN_1384"
+  tagged A17
+  ip address 10.113.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1385
+  name "VLAN_1385"
+  tagged A17
+  ip address 10.113.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1386
+  name "VLAN_1386"
+  tagged A17
+  ip address 10.113.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1387
+  name "VLAN_1387"
+  tagged A17
+  ip address 10.113.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1388
+  name "VLAN_1388"
+  tagged A17
+  ip address 10.113.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1389
+  name "VLAN_1389"
+  tagged A17
+  ip address 10.113.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1390
+  name "VLAN_1390"
+  tagged A18
+  ip address 10.114.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1391
+  name "VLAN_1391"
+  tagged A18
+  ip address 10.114.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1392
+  name "VLAN_1392"
+  tagged A18
+  ip address 10.114.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1393
+  name "VLAN_1393"
+  tagged A18
+  ip address 10.114.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1394
+  name "VLAN_1394"
+  tagged A18
+  ip address 10.114.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1395
+  name "VLAN_1395"
+  tagged A18
+  ip address 10.114.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1396
+  name "VLAN_1396"
+  tagged A18
+  ip address 10.114.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1397
+  name "VLAN_1397"
+  tagged A18
+  ip address 10.114.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1398
+  name "VLAN_1398"
+  tagged A18
+  ip address 10.114.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1399
+  name "VLAN_1399"
+  tagged A18
+  ip address 10.114.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1400
+  name "VLAN_1400"
+  tagged A18
+  ip address 10.114.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1401
+  name "VLAN_1401"
+  tagged A18
+  ip address 10.114.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1402
+  name "VLAN_1402"
+  tagged A18
+  ip address 10.114.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1403
+  name "VLAN_1403"
+  tagged A18
+  ip address 10.114.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1404
+  name "VLAN_1404"
+  tagged A18
+  ip address 10.114.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1405
+  name "VLAN_1405"
+  tagged A18
+  ip address 10.114.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1406
+  name "VLAN_1406"
+  tagged A18
+  ip address 10.114.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1407
+  name "VLAN_1407"
+  tagged A18
+  ip address 10.114.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1408
+  name "VLAN_1408"
+  tagged A18
+  ip address 10.114.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1409
+  name "VLAN_1409"
+  tagged A18
+  ip address 10.114.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1410
+  name "VLAN_1410"
+  tagged A19
+  ip address 10.115.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1411
+  name "VLAN_1411"
+  tagged A19
+  ip address 10.115.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1412
+  name "VLAN_1412"
+  tagged A19
+  ip address 10.115.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1413
+  name "VLAN_1413"
+  tagged A19
+  ip address 10.115.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1414
+  name "VLAN_1414"
+  tagged A19
+  ip address 10.115.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1415
+  name "VLAN_1415"
+  tagged A19
+  ip address 10.115.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1416
+  name "VLAN_1416"
+  tagged A19
+  ip address 10.115.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1417
+  name "VLAN_1417"
+  tagged A19
+  ip address 10.115.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1418
+  name "VLAN_1418"
+  tagged A19
+  ip address 10.115.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1419
+  name "VLAN_1419"
+  tagged A19
+  ip address 10.115.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1420
+  name "VLAN_1420"
+  tagged A19
+  ip address 10.115.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1421
+  name "VLAN_1421"
+  tagged A19
+  ip address 10.115.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1422
+  name "VLAN_1422"
+  tagged A19
+  ip address 10.115.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1423
+  name "VLAN_1423"
+  tagged A19
+  ip address 10.115.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1424
+  name "VLAN_1424"
+  tagged A19
+  ip address 10.115.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1425
+  name "VLAN_1425"
+  tagged A19
+  ip address 10.115.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1426
+  name "VLAN_1426"
+  tagged A19
+  ip address 10.115.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1427
+  name "VLAN_1427"
+  tagged A19
+  ip address 10.115.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1428
+  name "VLAN_1428"
+  tagged A19
+  ip address 10.115.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1429
+  name "VLAN_1429"
+  tagged A19
+  ip address 10.115.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1430
+  name "VLAN_1430"
+  tagged A20
+  ip address 10.116.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1431
+  name "VLAN_1431"
+  tagged A20
+  ip address 10.116.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1432
+  name "VLAN_1432"
+  tagged A20
+  ip address 10.116.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1433
+  name "VLAN_1433"
+  tagged A20
+  ip address 10.116.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1434
+  name "VLAN_1434"
+  tagged A20
+  ip address 10.116.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1435
+  name "VLAN_1435"
+  tagged A20
+  ip address 10.116.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1436
+  name "VLAN_1436"
+  tagged A20
+  ip address 10.116.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1437
+  name "VLAN_1437"
+  tagged A20
+  ip address 10.116.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1438
+  name "VLAN_1438"
+  tagged A20
+  ip address 10.116.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1439
+  name "VLAN_1439"
+  tagged A20
+  ip address 10.116.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1440
+  name "VLAN_1440"
+  tagged A20
+  ip address 10.116.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1441
+  name "VLAN_1441"
+  tagged A20
+  ip address 10.116.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1442
+  name "VLAN_1442"
+  tagged A20
+  ip address 10.116.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1443
+  name "VLAN_1443"
+  tagged A20
+  ip address 10.116.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1444
+  name "VLAN_1444"
+  tagged A20
+  ip address 10.116.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1445
+  name "VLAN_1445"
+  tagged A20
+  ip address 10.116.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1446
+  name "VLAN_1446"
+  tagged A20
+  ip address 10.116.17.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1447
+  name "VLAN_1447"
+  tagged A20
+  ip address 10.116.18.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1448
+  name "VLAN_1448"
+  tagged A20
+  ip address 10.116.19.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1449
+  name "VLAN_1449"
+  tagged A20
+  ip address 10.116.20.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1
+  name "DEFAULT_VLAN"
+  untagged A21,A22,A23
+  no ip address
+  no untagged A1,A2,A3,A4,A5,A6,A7,A8,A9,A10,A11,A12,A13,A14,A15,A16,A17,A18,A19,A20,A24
+  exit
+vlan 3
+  name "vask"
+  tagged A23,A24
+  no ip address
+  exit
+vlan 4
+  name "noegle"
+  tagged A23,A24
+  no ip address
+  exit
+vlan 7
+  name "wan"
+  tagged A23,A24
+  no ip address
+  exit
+vlan 9
+  name "video"
+  tagged A23,A24
+  no ip address
+  exit
+vlan 99
+  name "Beboer Wifi"
+  tagged A23,A24
+  no ip address
+  exit
+vlan 1450
+  name "VLAN_1450"
+  tagged A23
+  ip address 10.96.1.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1451
+  name "VLAN_1451"
+  tagged A23
+  ip address 10.96.2.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1452
+  name "VLAN_1452"
+  tagged A23
+  ip address 10.96.3.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1453
+  name "VLAN_1453"
+  tagged A23
+  ip address 10.96.4.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1454
+  name "VLAN_1454"
+  tagged A23
+  ip address 10.96.5.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1455
+  name "VLAN_1455"
+  tagged A23
+  ip address 10.96.6.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1456
+  name "VLAN_1456"
+  tagged A23
+  ip address 10.96.7.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1457
+  name "VLAN_1457"
+  tagged A23
+  ip address 10.96.8.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1458
+  name "VLAN_1458"
+  tagged A23
+  ip address 10.96.9.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1459
+  name "VLAN_1459"
+  tagged A23
+  ip address 10.96.10.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1460
+  name "VLAN_1460"
+  tagged A23
+  ip address 10.96.11.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1461
+  name "VLAN_1461"
+  tagged A23
+  ip address 10.96.12.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1462
+  name "VLAN_1462"
+  tagged A23
+  ip address 10.96.13.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1463
+  name "VLAN_1463"
+  tagged A23
+  ip address 10.96.14.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1464
+  name "VLAN_1464"
+  tagged A23
+  ip address 10.96.15.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 1465
+  name "VLAN_1465"
+  tagged A23
+  ip address 10.96.16.1 255.255.255.0
+  ip helper-address 10.0.0.2
+  ip helper-address 10.0.0.3
+  exit
+vlan 6
+  name "routing"
+  untagged A24
+  ip address 10.1.0.43 255.255.255.0
+  exit
+ip ssh
+ip ssh filetransfer
+management-vlan 2
+password manager
+dhcp-relay option 82 append ip
+ip routing
+ip route 0.0.0.0 0.0.0.0 10.1.0.1
+ip route 10.32.0.0 255.224.0.0 10.1.0.41
+ip route 10.64.0.0 255.224.0.0 10.1.0.42
+ip route 10.128.0.0 255.224.0.0 10.1.0.44
+ip route 10.160.0.0 255.224.0.0 10.1.0.45
+ip route 10.0.0.0 255.255.255.0 10.1.0.42

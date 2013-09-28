@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/netgruppe/!svn/ver/501/www/monitor.aub.dk/network/controllers
+END
+Controller.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/netgruppe/!svn/ver/456/www/monitor.aub.dk/network/controllers/Controller.php
+END
+DeviceController.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/netgruppe/!svn/ver/501/www/monitor.aub.dk/network/controllers/DeviceController.php
+END
+EndpointController.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/netgruppe/!svn/ver/384/www/monitor.aub.dk/network/controllers/EndpointController.php
+END
+VlanController.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/netgruppe/!svn/ver/384/www/monitor.aub.dk/network/controllers/VlanController.php
+END
+DeviceTypeController.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/netgruppe/!svn/ver/375/www/monitor.aub.dk/network/controllers/DeviceTypeController.php
+END
+PortController.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/netgruppe/!svn/ver/429/www/monitor.aub.dk/network/controllers/PortController.php
+END

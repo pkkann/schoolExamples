@@ -1,0 +1,187 @@
+; J9086A (created by mbhNetwork on Thu, 19 Sep 2013 19:51:39 +0200)
+hostname "center1.switch.aub.dk"
+max-vlans 30
+time timezone 60
+time daylight-time-rule Western-Europe
+sntp server 10.2.0.254
+timesync sntp
+sntp unicast
+logging 10.2.0.254
+snmp-server community "public" Unrestricted
+snmp-server contact "help@aub.dk"
+snmp-server location "center 1"
+interface 2
+  name "Den Våde Høne"
+exit
+interface 3
+  name "Kontor: Ledig"
+exit
+interface 4
+  name "Kontor: PC"
+exit
+interface 5
+  name "WiFi - Beboerkontor"
+exit
+interface 6
+  name "Moedelokale PC"
+exit
+interface 11
+  name "Motionlokale oest"
+exit
+interface 17
+  name "Kamera: Vaskeri 1"
+exit
+interface 18
+  name "Vaskeri klient"
+exit
+interface 19
+  name "Noegle: Hoveddoer"
+exit
+interface 20
+  name "Noegle: Moedelokale"
+exit
+interface 21
+  name "Noegle: Hoenen"
+exit
+interface 22
+  name "Kamera: BK 1"
+exit
+interface 23
+  name "Kamera: BK 2"
+exit
+interface 26
+  name "core1"
+exit
+vlan 500
+  name "VLAN_500"
+  untagged 1
+  tagged 26
+  no ip address
+  exit
+vlan 501
+  name "VLAN_501"
+  untagged 2
+  tagged 26
+  no ip address
+  exit
+vlan 505
+  name "VLAN_505"
+  untagged 3,6
+  tagged 26
+  no ip address
+  exit
+vlan 503
+  name "VLAN_503"
+  untagged 4
+  tagged 26
+  no ip address
+  exit
+vlan 99
+  name "Beboer Wifi"
+  tagged 5,26
+  no ip address
+  exit
+vlan 2
+  name "management"
+  untagged 5
+  tagged 26
+  ip address 10.2.5.37 255.255.0.0
+  exit
+vlan 506
+  name "VLAN_506"
+  untagged 7
+  tagged 26
+  no ip address
+  exit
+vlan 507
+  name "VLAN_507"
+  untagged 8
+  tagged 26
+  no ip address
+  exit
+vlan 508
+  name "VLAN_508"
+  untagged 9
+  tagged 26
+  no ip address
+  exit
+vlan 509
+  name "VLAN_509"
+  untagged 10
+  tagged 26
+  no ip address
+  exit
+vlan 510
+  name "VLAN_510"
+  untagged 11
+  tagged 26
+  no ip address
+  exit
+vlan 511
+  name "VLAN_511"
+  untagged 12
+  tagged 26
+  no ip address
+  exit
+vlan 512
+  name "VLAN_512"
+  untagged 13
+  tagged 26
+  no ip address
+  exit
+vlan 513
+  name "VLAN_513"
+  untagged 14
+  tagged 26
+  no ip address
+  exit
+vlan 514
+  name "VLAN_514"
+  untagged 15
+  tagged 26
+  no ip address
+  exit
+vlan 515
+  name "VLAN_515"
+  untagged 16
+  tagged 26
+  no ip address
+  exit
+vlan 9
+  name "video"
+  untagged 17,22,23
+  tagged 26
+  no ip address
+  exit
+vlan 3
+  name "vask"
+  untagged 18
+  tagged 26
+  no ip address
+  exit
+vlan 4
+  name "noegle"
+  untagged 19,20,21
+  tagged 26
+  no ip address
+  exit
+vlan 1
+  name "DEFAULT_VLAN"
+  untagged 24,25,26,27,28
+  no ip address
+  no untagged 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23
+  exit
+vlan 502
+  name "VLAN_502"
+  tagged 26
+  no ip address
+  exit
+vlan 504
+  name "VLAN_504"
+  tagged 26
+  no ip address
+  exit
+ip ssh
+ip ssh filetransfer
+management-vlan 2
+password manager

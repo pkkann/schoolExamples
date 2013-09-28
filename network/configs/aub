@@ -1,0 +1,75 @@
+; J4900B (created by mbhNetwork on Tue, 23 Mar 2010 07:46:54 +0100)
+hostname "aub.switch.aub.dk"
+max-vlans 15
+time timezone 60
+time daylight-time-rule Western-Europe
+sntp server 10.2.0.254
+timesync sntp
+sntp unicast
+logging 10.2.0.254
+snmp-server community "public" Unrestricted
+snmp-server contact "help@aub.dk"
+snmp-server location "administrationen"
+interface 1
+  name "noegle"
+exit
+interface 3
+  name "vask"
+exit
+interface 12
+  name "Siemens-elvarme"
+exit
+interface 17
+  name "video administrationen"
+exit
+interface 18
+  name "video server"
+exit
+interface 26
+  name "core2"
+exit
+vlan 4
+  name "noegle"
+  untagged 1
+  tagged 26
+  no ip address
+  exit
+vlan 978
+  name "AUB"
+  untagged 2,4,5,6,7,8,9,10,11,12,13,14,15,16
+  tagged 26
+  no ip address
+  exit
+vlan 3
+  name "vask"
+  untagged 3
+  tagged 26
+  no ip address
+  exit
+vlan 9
+  name "video"
+  untagged 17,18
+  tagged 26
+  no ip address
+  exit
+vlan 1
+  name "DEFAULT_VLAN"
+  untagged 19,20,21,22,23,25
+  no ip address
+  no untagged 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,24,26
+  exit
+vlan 7
+  name "wan"
+  untagged 24
+  tagged 26
+  no ip address
+  exit
+vlan 2
+  name "management"
+  tagged 26
+  ip address 10.2.17.41 255.255.0.0
+  exit
+ip ssh
+ip ssh filetransfer
+management-vlan 2
+password manager

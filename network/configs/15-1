@@ -1,0 +1,191 @@
+; J4900B (created by mbhNetwork on Fri, 20 Sep 2013 00:12:29 +0200)
+hostname "15-1.switch.aub.dk"
+max-vlans 31
+time timezone 60
+time daylight-time-rule Western-Europe
+sntp server 10.2.0.254
+timesync sntp
+sntp unicast
+logging 10.2.0.254
+snmp-server community "public" Unrestricted
+snmp-server contact "help@aub.dk"
+interface 1
+  name "15-1"
+exit
+interface 2
+  name "15-3"
+exit
+interface 3
+  name "15-5"
+exit
+interface 4
+  name "15-7"
+exit
+interface 5
+  name "15-9"
+exit
+interface 6
+  name "15-11"
+exit
+interface 7
+  name "15-12"
+exit
+interface 8
+  name "15-10"
+exit
+interface 9
+  name "15-8"
+exit
+interface 10
+  name "15-6"
+exit
+interface 11
+  name "15-4"
+exit
+interface 12
+  name "15-2"
+exit
+interface 25
+  name "core2"
+exit
+vlan 10
+  name "disabled"
+  untagged 1
+  tagged 25
+  no ip address
+  exit
+vlan 811
+  name "VLAN_811"
+  untagged 2
+  tagged 25
+  no ip address
+  exit
+vlan 812
+  name "VLAN_812"
+  untagged 3
+  tagged 25
+  no ip address
+  exit
+vlan 813
+  name "VLAN_813"
+  untagged 4
+  tagged 25
+  no ip address
+  exit
+vlan 814
+  name "VLAN_814"
+  untagged 5
+  tagged 25
+  no ip address
+  exit
+vlan 815
+  name "VLAN_815"
+  untagged 6
+  tagged 25
+  no ip address
+  exit
+vlan 816
+  name "VLAN_816"
+  untagged 7
+  tagged 25
+  no ip address
+  exit
+vlan 817
+  name "VLAN_817"
+  untagged 8
+  tagged 25
+  no ip address
+  exit
+vlan 818
+  name "VLAN_818"
+  untagged 9
+  tagged 25
+  no ip address
+  exit
+vlan 819
+  name "VLAN_819"
+  untagged 10
+  tagged 25
+  no ip address
+  exit
+vlan 820
+  name "VLAN_820"
+  untagged 11
+  tagged 25
+  no ip address
+  exit
+vlan 821
+  name "VLAN_821"
+  untagged 12
+  tagged 25
+  no ip address
+  exit
+vlan 822
+  name "VLAN_822"
+  untagged 13
+  tagged 25
+  no ip address
+  exit
+vlan 823
+  name "VLAN_823"
+  untagged 14
+  tagged 25
+  no ip address
+  exit
+vlan 824
+  name "VLAN_824"
+  untagged 15
+  tagged 25
+  no ip address
+  exit
+vlan 825
+  name "VLAN_825"
+  untagged 16
+  tagged 25
+  no ip address
+  exit
+vlan 826
+  name "VLAN_826"
+  untagged 17
+  tagged 25
+  no ip address
+  exit
+vlan 827
+  name "VLAN_827"
+  untagged 18
+  tagged 25
+  no ip address
+  exit
+vlan 828
+  name "VLAN_828"
+  untagged 19
+  tagged 25
+  no ip address
+  exit
+vlan 829
+  name "VLAN_829"
+  untagged 20
+  tagged 25
+  no ip address
+  exit
+vlan 1
+  name "DEFAULT_VLAN"
+  untagged 21,22,23,26
+  no ip address
+  no untagged 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,24,25
+  exit
+vlan 2
+  name "management"
+  untagged 24
+  tagged 25
+  ip address 10.2.15.1 255.255.0.0
+  exit
+vlan 810
+  name "VLAN_810"
+  tagged 25
+  no ip address
+  exit
+ip ssh
+ip ssh filetransfer
+management-vlan 2
+password manager

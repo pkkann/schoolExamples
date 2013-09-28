@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 21-09-2009 17:38:25 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="Entity.Adresse" table="adresse" catalog="arrangementadmv3db">
+        <id name="id" type="java.lang.Integer">
+            <column name="ADRESSE_ID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="kunde" class="Entity.Kunde" fetch="select">
+            <column name="KUNDE_ID" />
+        </many-to-one>
+        <property name="vej" type="string">
+            <column name="VEJ" length="45" not-null="true" />
+        </property>
+        <property name="postnummer" type="string">
+            <column name="POSTNUMMER" length="45" not-null="true" />
+        </property>
+        <property name="city" type="string">
+            <column name="CITY" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

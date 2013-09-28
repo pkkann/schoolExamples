@@ -1,0 +1,3 @@
+Her er DB lavet først, der er benyttet Hibernates Reverse engineeing til at lave XML-mapping filer og POJO klasser. Efterfølgende er der "repareret" i mapping-filerne
+
+Kunde og Adresse er mappet via hbm.xml og AnnotatedKunde og AnnotadedAdresse er mappet via annoteringer
