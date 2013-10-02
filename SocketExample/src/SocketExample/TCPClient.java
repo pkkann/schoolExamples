@@ -22,7 +22,7 @@ public class TCPClient {
         }
         BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
         // To server on local host
-        Socket clientSocket = new Socket("127.0.0.1", port);
+        Socket clientSocket = new Socket("127.0.0.1", 80);
         // To server on other host with IP-address = 83.92.58.109
         //Socket clientSocket = new Socket("83.92.58.109", port);
         PrintStream outToServer = new PrintStream(clientSocket.getOutputStream());
