@@ -21,6 +21,7 @@ public class TestSocketIterative {
             ServerSocket welcomeSocket = new ServerSocket(6789);
             
             while(true) {
+                System.out.println("Waiting");
                 Socket connectionSocket = welcomeSocket.accept();
                 SocketIterative si = new SocketIterative(connectionSocket);
                 si.run();
